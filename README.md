@@ -9,4 +9,4 @@ and request body as json:
 }
 
 And it is possible to redirect created short url using request path for example:
-http://localhost:8080/mapped-urls?shortUri=http://shortUrl.com/Je5Eu9
+http://localhost:8080/mapped-urls/redirect?shortUri=http://shortUrl.com/XZyN5F
