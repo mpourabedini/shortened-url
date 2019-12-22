@@ -1,4 +1,4 @@
-package com.neueda.shortenedurl.mappedURL.control;
+package com.neueda.shortenedurl.mappedURL.repository;
 
 import com.neueda.shortenedurl.mappedURL.entity.MappedUrl;
 import org.springframework.data.jpa.repository.Query;
@@ -10,9 +10,9 @@ import java.util.Optional;
 
 public interface MappedUrlRepository extends CrudRepository<MappedUrl, Long> {
 
-    @Query("SELECT m FROM MappedUrl m WHERE m.originalUrl = ':shortUri'")
+    @Query("SELECT m FROM MappedUrl m WHERE m.originalUrl = :originalUri")
     Optional<MappedUrl> findByOriginalUrl(@Param("originalUri") URI originalUri);
 
-    @Query("SELECT m FROM MappedUrl m WHERE m.shortenedUrl = ':shortUri'")
-    Optional<MappedUrl> findByShortenedUrl(@Param("shortUri") URI shortUri);
+    @Query("SELECT m FROM MappedUrl m WHERE m.shortenedUrl = :shortenedUrl")
+    Optional<MappedUrl> findByShortenedUrl(@Param("shortenedUrl") URI shortenedUrl);
 }

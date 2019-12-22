@@ -1,4 +1,4 @@
-package com.neueda.shortenedurl.mappedURL.control;
+package com.neueda.shortenedurl.mappedURL.service;
 
 import java.net.URI;
 import java.net.URISyntaxException;

@@ -1,4 +1,4 @@
-package com.neueda.shortenedurl.mappedURL.control;
+package com.neueda.shortenedurl.mappedURL.service;
 
 import com.neueda.shortenedurl.mappedURL.entity.MappedUrl;
 import org.springframework.stereotype.Component;

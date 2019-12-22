@@ -1,4 +1,4 @@
-package com.neueda.shortenedurl.mappedURL.boundary;
+package com.neueda.shortenedurl.mappedURL.controller;
 
 import com.neueda.shortenedurl.mappedURL.entity.MappedUrl;
 import com.neueda.shortenedurl.mappedURL.service.MappedUrlService;
@@ -24,8 +24,8 @@ public class MappedUrlController {
         return ResponseEntity.status(HttpStatus.CREATED).body(existedOrCreatedMappedUrl);
     }
 
-    @GetMapping("mapped-urls")
-    public ModelAndView retrieveShortenedUrl(@RequestParam("shortUri") URI shortUri) {
+    @GetMapping("mapped-urls/redirect")
+    public ModelAndView retrieveShortenedUrl(@RequestParam URI shortUri) {
         if (shortUri == null)
             ResponseEntity.status(HttpStatus.BAD_REQUEST);
         return mappedUrlService.redirect(shortUri);

@@ -1,7 +1,6 @@
 package com.neueda.shortenedurl.mappedURL.service;
 
-import com.neueda.shortenedurl.mappedURL.control.MappedUrlRepository;
-import com.neueda.shortenedurl.mappedURL.control.ShortenedMappedUrlEntityAssembler;
+import com.neueda.shortenedurl.mappedURL.repository.MappedUrlRepository;
 import com.neueda.shortenedurl.mappedURL.entity.MappedUrl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
